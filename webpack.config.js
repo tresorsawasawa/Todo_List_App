@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     data: './src/data.js',
-    refresh: './images/Refresh_icon.png',
+    // image1: './src/images/Refresh-icon.png',
   },
   devtool: false,
   devServer: {
@@ -31,6 +31,10 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
       },
     ],
   },
