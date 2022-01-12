@@ -44,7 +44,7 @@ export default class Data {
                                         <input class="check-input" value="checked" type="checkbox" id="check">
                                         <input class="task-input2" value="${atask.description}" type="text" id="task">
                                       </form >
-                                      <span class="ellipsis-icon">&#8942;</i></span>
+                                      <span class="ellipsis-icon clickable">&#8942;</i></span>
                                  </li>`;
     });
     return listContainer;
