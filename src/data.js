@@ -1,3 +1,5 @@
+import './style.css';
+
 const tasks = [
   {
     index: 0,
@@ -13,6 +15,11 @@ const tasks = [
     index: 2,
     description: 'Prepare my interview',
     completed: true,
+  },
+  {
+    index: 3,
+    description: 'Attend the standup call',
+    completed: false,
   },
 ];
 
