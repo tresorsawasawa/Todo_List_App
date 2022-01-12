@@ -5,8 +5,6 @@ module.exports = {
   mode: 'production',
   entry: {
     index: './src/index.js',
-    data: './src/data.js',
-    // image1: './src/images/Refresh-icon.png',
   },
   devtool: false,
   devServer: {
