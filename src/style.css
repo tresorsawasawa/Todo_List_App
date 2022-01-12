@@ -35,8 +35,9 @@ body {
 .content {
   width: 70%;
   border: 2px solid #fff;
-  box-shadow: 3px 3px 5px #909397;
+  box-shadow: 3px 3px 7px #909397;
   margin-top: 40px;
+  border-radius: 5px;
 }
 
 .title-content {
@@ -74,19 +75,9 @@ body {
   color: #4e5052;
 }
 
-.clickable {
-  cursor: pointer;
-}
+.clickable { cursor: pointer; }
 
-#task-list {
-  border: solid red !important;
-  display: flex;
-}
-
-.list {
-  border: solid red;
-  width: 100%;
-}
+.list { width: 100%; }
 
 .list .task-item,
 .list .task-item .form2 { position: relative; }
@@ -97,12 +88,14 @@ body {
   left: 8px;
   height: 15px;
   width: 15px;
+  text-transform: capitalize;
 }
 
 .ellipsis-icon {
   position: absolute;
   right: 3px;
-  top: 8px;
+  top: 10px;
+  font-weight: 900;
 }
 
 .task-input2 {
@@ -113,4 +106,13 @@ body {
   outline: none;
   font-size: 18px;
   padding-left: 30px;
+}
+
+#clear-all-btn {
+  margin: 10px auto;
+  padding: 12px 20px;
+  border: none !important;
+  background: none;
+  font-size: 18px;
+  color: #4a4c4e;
 }
