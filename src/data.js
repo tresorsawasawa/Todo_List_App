@@ -1,3 +1,5 @@
+import './style.css';
+
 const tasks = [
   {
     index: 0,
@@ -36,18 +38,13 @@ export default class Data {
 
     allTasks.forEach((atask) => {
       const listContainer = document.querySelector('.list');
-      listContainer.classList.add(
-        'w-100',
-        'ps-0',
-      );
-      listContainer.innerHTML += `<li class="task-item d-flex w-100">
-                                    <div class="d-flex w-100 position-relative">
-                                    <form class="py-2 position-relative">
-                                        <input class=" mt-3 position-absolute" value="checked" type="checkbox" id="check">
-                                        <input class="form-control text-capitalize ps-4 py-2 w-100 task-input2 shadow-none" value="${atask.description}" type="text" id="task">
-                                        </form >
-                                        <span class="task-span"><i class="fa fa-ellipsis-v text-secondary"></i></span>
-                                    </div>
+      listContainer.classList.add('task-list');
+      listContainer.innerHTML += `<li class="task-item">
+                                      <form id="form2" class="form">
+                                        <input class="check-input" value="checked" type="checkbox" id="check">
+                                        <input class="task-input2" value="${atask.description}" type="text" id="task">
+                                      </form >
+                                      <span class="ellipsis-icon">&#8942;</i></span>
                                  </li>`;
     });
     return listContainer;
