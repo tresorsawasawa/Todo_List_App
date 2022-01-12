@@ -4,16 +4,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 body {
-  font-family: " Poppins", sans-serif;
+  font-family: " Poppins ", sans-serif;
   width: 100%;
   height: 100vh;
   background-color: #f8f9fa;
+  font-size: 16px;
 }
 
-.main-container { height: 100%; }
+.main-container {
+  height: 100%;
+  background-color: #f8f9fa;
+}
 
 .refrsh-img {
   height: 18px;
@@ -23,6 +28,89 @@ body {
 .flex-center-column {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
+}
+
+.content {
+  width: 70%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 5px #909397;
+  margin-top: 40px;
+}
+
+.title-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.title-content p { font-size: 20px; }
+
+.form {
+  position: relative;
+  width: 100%;
+}
+
+.add-task-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #909397;
+  border-right: none;
+  border-left: none;
+  outline: none !important;
+}
+
+.add-task-input::placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.return-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #4e5052;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+#task-list {
+  border: solid red !important;
+  display: flex;
+}
+
+.list {
+  border: solid red;
+  width: 100%;
+}
+
+.list .task-item,
+.list .task-item .form2 { position: relative; }
+
+.check-input {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  height: 15px;
+  width: 15px;
+}
+
+.ellipsis-icon {
+  position: absolute;
+  right: 3px;
+  top: 8px;
+}
+
+.task-input2 {
+  border: none;
+  border-bottom: 1px solid #909397;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  padding-left: 30px;
 }
