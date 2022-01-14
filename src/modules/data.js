@@ -1,32 +1,8 @@
-
-// const tasks = [
-//   {
-//     index: 0,
-//     description: 'Attend morning  session',
-//     completed: true,
-//   },
-//   {
-//     index: 1,
-//     description: 'Submit the project',
-//     completed: true,
-//   },
-//   {
-//     index: 2,
-//     description: 'Prepare my interview',
-//     completed: true,
-//   },
-//   {
-//     index: 3,
-//     description: 'Attend the standup call',
-//     completed: false,
-//   },
-// ];
-
-const sortTaskByIndex = (tasks) => { tasks.sort((a, b) => a.index - b.index); };
+import { sortTaskByIndex } from './completeTask.js';
 
 export default class Data {
   static getAllData() {
-    return JSON.parse(localStorage.getItem('Tasks'));
+    return JSON.parse(localStorage.getItem('Tasks')) || [];
   }
 
   static storeData(tasks) {
@@ -38,31 +14,29 @@ export default class Data {
     return allData.filter((adata) => adata.index === index)[0];
   }
 
-  static displayTask(listContainer) {
+  static displayTask() {
     const allTasks = Data.getAllData();
+    if (allTasks !== null) {
+      sortTaskByIndex(allTasks);
+    }
 
-    allTasks.forEach((atask) => {
-      const listContainer = document.querySelector('.list');
-      listContainer.classList.add('task-list');
-      listContainer.innerHTML += `<li class="task-item">
-                                      <form id="form2" class="form">
-                                        <input class="check-input" value="checked" type="checkbox" id="check">
-                                        <input class="task-input2" value="${atask.description}" type="text" id="task">
-                                      </form >
-                                      <span class="ellipsis-icon clickable">&#8942;</i></span>
-                                 </li>`;
+    const tasksList = document.querySelector('.list');
+    tasksList.innerHTML = '';
+
+    allTasks.forEach((task) => {
+      const tasksList = document.querySelector('.list');
+      tasksList.classList.add('task-list');
+
+      const taskItem = document.createElement('li');
+      taskItem.classList.add('task-item');
+      taskItem.id = task.index;
+      taskItem.innerHTML = `<form id="form2" class="form">
+                              <input class="check-input" value="checked" type="checkbox" id="check">
+                              <input class="task-input2" value="${task.description}" type="text" id="task">
+                            </form >
+                            <span class="ellipsis-icon clickable">&#8942;</i></span>
+                           `;
+      tasksList.appendChild(taskItem);
     });
-    return listContainer;
   }
 }
-
-export const addNewTask = (inputTask, list, Data) => {
-  const tasks = Data.getDataAll() || [];
-  const newTask = {
-    description: inputTask,
-    completed: false,
-    index: tasks.length + 1,
-  };
-  tasks.push(newTask);
-  Data.storeData(tasks);
-};
