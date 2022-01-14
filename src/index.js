@@ -1,5 +1,5 @@
 import './style.css';
-import Data from './modules/data.js';
+import { getTask } from './modules/data.js';
 
 function getInputValue(task) {
   return task.description;
