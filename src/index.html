@@ -7,19 +7,22 @@
   <title>Todo_List_App</title>
 </head>
 <body>
-  <div class="main-container flex-center-column">
-    <div class="content">
-      <div class="title-content">
-        <p>Todoy's To Do</p>
-        <img src="./images/Refresh-icon.png" class="refrsh-img clickable" alt="Refresh icon">
+  <div id="tasks" class="flex-center">
+    <div class="task-list flex-center">
+      <div class="container flex-center">
+        <span class="title">Today's To Do</span>
+        <span class="reload"><i class="fas fa-sync-alt"></i></span>
       </div>
-      <form class="form flex-center-column">
-        <input type="text" class="add-task-input" placeholder="Add to your list">
-        <img src="./images/plus-circle-icon.jpg" class="plus-circle-icon clickable" alt="Plus circle">
-        <ul class="list"></ul>
-        <button type="submit" id="clear-all-btn" class="clickable">Clear All Completed</button>
-       </form>
-    </div>`
+      <div class="container flex-center">
+        <form id="add-task" class="flex-center" action="/">
+          <input id="add-task-input" type="text" placeholder="Add to your list" />
+          <button><i class="fa fa-level-down-alt"></i></button>
+        </form>
+      </div>
+      <ul class="task-list-container">
+      </ul>
+      <button class="container btn clear-task" type="button">Clear all completed</button>
+    </div>
   </div>
 </body>
 </html>
