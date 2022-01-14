@@ -1,4 +1,4 @@
-// import Data from './data.js';
+import Data from './data.js';
 
 export const addNewTask = (inputTask, tasksList, Data) => {
   const tasks = Data.getAllData() || [];
@@ -14,4 +14,27 @@ export const addNewTask = (inputTask, tasksList, Data) => {
   Data.displayTask(tasksList);
 };
 
-export const deleteTask = '';
+export const deleteData = (icon, tasksList, Data) => {
+  const modifyTask = icon.parentElement;
+  const li = modifyTask.parentElement.parentElement;
+  const allTasks = Data.getAllData();
+
+  if (allTasks.length === 1) {
+    Data.storeData([]);
+  } else {
+    allTasks.splice(li.id, 1);
+    Data.storeData(allTasks);
+  }
+  const addTask = tasksList.querySelector('.task-item');
+  Data.storeData(tasksList);
+  tasksList.innerHTML = addTask;
+  Data.displayTask(tasksList);
+};
+
+export function DeleteTask(DeleteIcons, tasksList) {
+  DeleteIcons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      deleteData(icon, tasksList, Data);
+    });
+  });
+}
