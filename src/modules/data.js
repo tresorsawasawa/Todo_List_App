@@ -1,3 +1,4 @@
+
 // const tasks = [
 //   {
 //     index: 0,
@@ -21,6 +22,8 @@
 //   },
 // ];
 
+const sortTaskByIndex = (tasks) => { tasks.sort((a, b) => a.index - b.index); };
+
 export default class Data {
   static getAllData() {
     return JSON.parse(localStorage.getItem('Tasks'));
@@ -31,7 +34,7 @@ export default class Data {
   }
 
   static getData(index) {
-    const allData = Data.getAllData();
+    const allData = sortTaskByIndex(Data.getDataAll());
     return allData.filter((adata) => adata.index === index)[0];
   }
 
@@ -53,3 +56,13 @@ export default class Data {
   }
 }
 
+export const addNewTask = (inputTask, list, Data) => {
+  const tasks = Data.getDataAll() || [];
+  const newTask = {
+    description: inputTask,
+    completed: false,
+    index: tasks.length + 1,
+  };
+  tasks.push(newTask);
+  Data.storeData(tasks);
+};
