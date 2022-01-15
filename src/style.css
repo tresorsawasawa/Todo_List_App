@@ -108,6 +108,7 @@ i { cursor: pointer; }
 
 .task-list-container .task .left form {
   width: 100%;
+  display: flex;
 }
 
 .task-list-container .task .left .edit-task {
@@ -142,6 +143,8 @@ i { cursor: pointer; }
   font-style: italic;
   text-decoration: line-through;
 }
+
+.dragging { border: 2px solid #0874fb; }
 
 .focus { background-color: #faf3db; }
 
