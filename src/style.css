@@ -87,9 +87,7 @@ i { cursor: pointer; }
   transform: rotate(90deg);
 }
 
-.task-list #add-task button i:hover {
-  color: #878a8f;
-}
+.task-list #add-task button i:hover { color: #878a8f; }
 
 .task-list #add-task input {
   flex: 1;
@@ -106,9 +104,7 @@ i { cursor: pointer; }
   cursor: move;
 }
 
-.task-list-container .task .left {
-  width: 90%;
-}
+.task-list-container .task .left { width: 90%; }
 
 .task-list-container .task .left form {
   width: 100%;
@@ -147,18 +143,10 @@ i { cursor: pointer; }
   text-decoration: line-through;
 }
 
-.focus {
-  background-color: #faf3db;
-}
+.focus { background-color: #faf3db; }
 
-.task-list-container .task .right .far {
-  display: none;
-}
+.task-list-container .task .right .far { display: none; }
 
-.task-list-container .task.focus .right .far {
-  display: block;
-}
+.task-list-container .task.focus .right .far { display: block; }
 
-.task-list-container .task.focus .right .fas {
-  display: none;
-}
+.task-list-container .task.focus .right .fas { display: none; }
