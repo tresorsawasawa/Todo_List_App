@@ -3,7 +3,8 @@
 /* eslint-disable import/prefer-default-export */
 import './style.css';
 import { getTask } from './modules/data.js';
-import { deleteTask, deleteOne } from './modules/controllTools.js';
+import { deleteTask, deleteOne, updateTask } from './modules/controllTools.js';
+import { dragDrop } from './modules/dragAndDrop.js';
 
 export const taskList = document.querySelector('.task-list-container');
 
@@ -46,6 +47,11 @@ editForm.forEach((form) => {
       });
     });
   });
+});
+
+window.addEventListener('load', () => {
+  updateTask();
+  dragDrop();
 });
 
 reload.addEventListener('click', () => {
