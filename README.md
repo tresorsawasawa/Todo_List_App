@@ -3,7 +3,7 @@
 
 ## Description
 
-![App View](./src/images/App_Screnshot.png)
+![App View](./src/images/Todo_screenshot.png)
 
 > "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. 
 
