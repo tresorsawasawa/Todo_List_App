@@ -1,6 +1,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-cycle */
+
 import { task, taskList } from '../index.js';
 
 export const dragDrop = () => {
