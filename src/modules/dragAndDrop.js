@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import { task, taskList } from './index.js';
 
 export const dragDrop = () => {
@@ -17,5 +18,21 @@ export const dragDrop = () => {
       taskList.appendChild(draggable);
     }
     taskList.insertBefore(draggable, afterElement);
-  }
-}
+  });
+
+  const dragAfterElement = (taskListContainer, y) => {
+    const draggableElements = [...taskListContainer.querySelectorAll('.task:not(.dragging)')];
+
+    return draggableElements.reduce((closest, child) => {
+      const rectangle = child.getBoundingClientRect();
+      const offset = y - rectangle.top - rectangle.height / 2;
+      if (offset < 0 && offset > closest.offset) {
+        return {
+          offset,
+          element: child,
+        };
+      }
+      return closest;
+    }, { offset: Number.NEGATIVE_INFINITY }).element;
+  };
+};
