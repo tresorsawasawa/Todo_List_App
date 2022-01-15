@@ -1,6 +1,8 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable import/prefer-default-export */
 import './style.css';
 import { getTask } from './modules/data.js';
+import { updateTask, deleteTask, deleteOne } from './modules/controllTools.js';
 
 export const taskList = document.querySelector('.task-list-container');
 
@@ -28,6 +30,7 @@ getTask().forEach((task) => {
 export const task = document.querySelectorAll('.task');
 export const editTask = document.querySelectorAll('.edit-task');
 const editForm = document.querySelectorAll('.edit-form');
+const reload = document.querySelector('.reload');
 
 editForm.forEach((form) => {
   form.addEventListener('submit', (e) => {
@@ -40,5 +43,32 @@ editForm.forEach((form) => {
         }
       });
     });
+  });
+});
+
+window.addEventListener('load', () => {
+  updateTask();
+});
+
+reload.addEventListener('click', () => {
+  location.reload();
+});
+
+task.forEach((item) => {
+  item.addEventListener('click', () => {
+    task.forEach((t) => t.classList.remove('focus'));
+    item.classList.add('focus');
+  });
+});
+
+deleteTask();
+
+task.forEach((item) => {
+  item.addEventListener('click', () => {
+    if (item.classList.contains('focus')) {
+      const deleteIcon = item.querySelector('.far');
+      const taskId = item.querySelector('.checkbox').id;
+      deleteOne(deleteIcon, taskId);
+    }
   });
 });
