@@ -12,3 +12,11 @@ export function deleteTask() {
     }
   });
 }
+
+export function deleteOne(deleteIcon, taskId) {
+  deleteIcon.addEventListener('click', () => {
+    const filteredTask = getTask().filter((task) => task.index !== taskId);
+    localStorage.setItem('Task-list', JSON.stringify(filteredTask));
+    location.reload();
+  });
+}
