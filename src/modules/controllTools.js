@@ -1,5 +1,7 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable import/prefer-default-export */
+
 import { getTask } from './data.js';
 
 export function deleteTask() {
