@@ -42,8 +42,7 @@ And For tracking linter errors in JavaScript files run:
 ``` npx eslint . ```
 ## Live Demo
 
-See the live by clicking [Live Demo Link]( Your site is ready to be published at https://tresorsawasawa.github.io/Todo_List_App/
- )
+See the [Live](https://tresorsawasawa.github.io/Todo_List_App/)
 
 ## Authors
 
@@ -51,7 +50,7 @@ See the live by clicking [Live Demo Link]( Your site is ready to be published at
 
 - GitHub: [@tresorsawasawa](https://github.com/tresorsawasawa)
 - Twitter: [@tresorsawasawa](https://twitter.com/TresorSawasawa)
-- LinkedIn: [Trésor Sawasawa](https://www.linkedin.com/in/ayandokunelijah/)
+- LinkedIn: [Trésor Sawasawa](https://www.linkedin.com/in/tr%C3%A9sor-sawasawa-43745320b/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
