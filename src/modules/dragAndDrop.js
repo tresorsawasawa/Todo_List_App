@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-use-before-define */
 /* eslint-disable import/prefer-default-export */
-import { task, taskList } from './index.js';
+import { task, taskList } from '../index.js';
 
 export const dragDrop = () => {
   task.forEach((item) => {
