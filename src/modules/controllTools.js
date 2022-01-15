@@ -2,6 +2,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable import/prefer-default-export */
 
+import { editTask, checkbox } from '../index.js';
 import { getTask } from './data.js';
 
 export function deleteTask() {
@@ -40,5 +41,29 @@ export function deleteOne(deleteIcon, taskId) {
     const filteredTask = getTask().filter((task) => task.index !== taskId);
     localStorage.setItem('Task-list', JSON.stringify(filteredTask));
     location.reload();
+  });
+}
+
+export function updateTask() {
+  checkbox.forEach((check) => {
+    check.addEventListener('click', () => {
+      editTask.forEach((task) => {
+        if (check.id === task.dataset.indexNumber) {
+          getTask().forEach((item) => {
+            if (item.index === check.id) {
+              if (item.completed) {
+                item.completed = false;
+                localStorage.setItem('Task-list', JSON.stringify(getTask()));
+                location.reload();
+              } else {
+                item.completed = true;
+                localStorage.setItem('Task-list', JSON.stringify(getTask()));
+                location.reload();
+              }
+            }
+          });
+        }
+      });
+    });
   });
 }

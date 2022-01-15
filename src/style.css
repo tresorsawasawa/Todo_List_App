@@ -87,9 +87,7 @@ i { cursor: pointer; }
   transform: rotate(90deg);
 }
 
-.task-list #add-task button i:hover {
-  color: #878a8f;
-}
+.task-list #add-task button i:hover { color: #878a8f; }
 
 .task-list #add-task input {
   flex: 1;
@@ -106,12 +104,11 @@ i { cursor: pointer; }
   cursor: move;
 }
 
-.task-list-container .task .left {
-  width: 90%;
-}
+.task-list-container .task .left { width: 90%; }
 
 .task-list-container .task .left form {
   width: 100%;
+  display: flex;
 }
 
 .task-list-container .task .left .edit-task {
@@ -130,34 +127,29 @@ i { cursor: pointer; }
 .btn {
   cursor: pointer;
   font-size: 1rem;
-  color: #b3aeae;
+  color: #8d8787;
   background-color: #f8f9fa;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
 
 .btn:hover {
-  background-color: #b3aeae;
+  background-color: #999494;
   color: #f8f9fa;
 }
 
 .disabled {
   font-size: 0.6rem;
   font-style: italic;
+  text-decoration: line-through;
 }
 
-.focus {
-  background-color: #faf3db;
-}
+.dragging { border: 2px solid #383c41; }
 
-.task-list-container .task .right .far {
-  display: none;
-}
+.focus { background-color: #faf3db; }
 
-.task-list-container .task.focus .right .far {
-  display: block;
-}
+.task-list-container .task .right .far { display: none; }
 
-.task-list-container .task.focus .right .fas {
-  display: none;
-}
+.task-list-container .task.focus .right .far { display: block; }
+
+.task-list-container .task.focus .right .fas { display: none; }

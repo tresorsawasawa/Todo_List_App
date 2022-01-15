@@ -1,8 +1,10 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable import/prefer-default-export */
 import './style.css';
 import { getTask } from './modules/data.js';
-import { deleteTask, deleteOne } from './modules/controllTools.js';
+import { deleteTask, deleteOne, updateTask } from './modules/controllTools.js';
+import { dragDrop } from './modules/dragAndDrop.js';
 
 export const taskList = document.querySelector('.task-list-container');
 
@@ -17,20 +19,21 @@ getTask().forEach((task) => {
   task.completed ? 'checked' : ''
 }  class="checkbox" />
     <form class="edit-form" action="/">
-     <input data-index-number=${task.index} value='${getInputValue(task)}' class="${task.completed ? 'edit-task disabled' : 'edit-task'}" ${task.completed ? 'disabled' : ''}>
-   </form>
-  </span>
+      <input data-index-number=${task.index} value='${getInputValue(task)}' class="${task.completed ? 'edit-task disabled' : 'edit-task'}" ${task.completed ? 'disabled' : ''}>
+    </form>
+    </span>
     <span class="right">
       <i class="fas fa-ellipsis-v"></i>
-        <i class="far fa-trash-alt"></i>
+      <i class="far fa-trash-alt"></i>
       </span>
-  </li>`;
+   </li>`;
 });
 
 export const task = document.querySelectorAll('.task');
 export const editTask = document.querySelectorAll('.edit-task');
 const editForm = document.querySelectorAll('.edit-form');
 const reload = document.querySelector('.reload');
+export const checkbox = document.querySelectorAll('.checkbox');
 
 editForm.forEach((form) => {
   form.addEventListener('submit', (e) => {
@@ -44,6 +47,11 @@ editForm.forEach((form) => {
       });
     });
   });
+});
+
+window.addEventListener('load', () => {
+  updateTask();
+  dragDrop();
 });
 
 reload.addEventListener('click', () => {
