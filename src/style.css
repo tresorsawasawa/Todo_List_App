@@ -126,14 +126,14 @@ i { cursor: pointer; }
 .btn {
   cursor: pointer;
   font-size: 1rem;
-  color: #b3aeae;
+  color: #8d8787;
   background-color: #f8f9fa;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
 
 .btn:hover {
-  background-color: #b3aeae;
+  background-color: #999494;
   color: #f8f9fa;
 }
 
