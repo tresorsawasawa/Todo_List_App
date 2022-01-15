@@ -17,14 +17,14 @@ getTask().forEach((task) => {
   task.completed ? 'checked' : ''
 }  class="checkbox" />
     <form class="edit-form" action="/">
-    <input data-index-number=${task.index} value='${getInputValue(task)}' class="${task.completed ? 'edit-task disabled' : 'edit-task'}" ${task.completed ? 'disabled' : ''}>
-  </form>
+     <input data-index-number=${task.index} value='${getInputValue(task)}' class="${task.completed ? 'edit-task disabled' : 'edit-task'}" ${task.completed ? 'disabled' : ''}>
+   </form>
   </span>
-  <span class="right">
-    <i class="fas fa-ellipsis-v"></i>
-    <i class="far fa-trash-alt"></i>
-  </span>
-</li>`;
+    <span class="right">
+      <i class="fas fa-ellipsis-v"></i>
+        <i class="far fa-trash-alt"></i>
+      </span>
+  </li>`;
 });
 
 export const task = document.querySelectorAll('.task');
