@@ -42,9 +42,7 @@ And For tracking linter errors in JavaScript files run:
 ``` npx eslint . ```
 ## Live Demo
 
-See the live by clicking [Live Demo Link]( Your site is ready to be published at https://tresorsawasawa.github.io/Todo_List_App/
- )
-
+See the [live](https://tresorsawasawa.github.io/Todo_List_App/)
 ## Authors
 
 👤 **@Tresorsawasawa**
