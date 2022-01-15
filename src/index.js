@@ -2,7 +2,7 @@
 /* eslint-disable import/prefer-default-export */
 import './style.css';
 import { getTask } from './modules/data.js';
-import { updateTask, deleteTask, deleteOne } from './modules/controllTools.js';
+import { deleteTask, deleteOne } from './modules/controllTools.js';
 
 export const taskList = document.querySelector('.task-list-container');
 
@@ -44,10 +44,6 @@ editForm.forEach((form) => {
       });
     });
   });
-});
-
-window.addEventListener('load', () => {
-  updateTask();
 });
 
 reload.addEventListener('click', () => {
