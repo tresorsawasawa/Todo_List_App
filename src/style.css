@@ -145,3 +145,19 @@ i { cursor: pointer; }
   font-size: 0.6rem;
   font-style: italic;
 }
+
+.focus {
+  background-color: #faf3db;
+}
+
+.task-list-container .task .right .far {
+  display: none;
+}
+
+.task-list-container .task.focus .right .far {
+  display: block;
+}
+
+.task-list-container .task.focus .right .fas {
+  display: none;
+}
