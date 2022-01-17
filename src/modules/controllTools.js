@@ -26,7 +26,8 @@ export function addTask() {
   }
   const addTaskForm = document.querySelector('#add-task');
   const data = JSON.parse(localStorage.getItem('Task-list')) || [];
-  addTaskForm.addEventListener('submit', () => {
+  addTaskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
     const inputTaskValue = document.querySelector('#add-task-input').value;
     if (inputTaskValue === '') return;
     const newTask = new Task(inputTaskValue);
