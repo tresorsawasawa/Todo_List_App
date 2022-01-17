@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/tresorsawasawa/Todo_List_App/issues"
   },
-  "homepage": "https://github.com/tresorsawasawa/Todo_List_App#readme",
+  "homepage": "https://github.com/tresorsawasawa/Todo_List_App/settings/pages#:~:text=https%3A//tresorsawasawa.github.io/Todo_List_App/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.5.1",
@@ -37,5 +37,8 @@
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

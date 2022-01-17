@@ -153,3 +153,20 @@ i { cursor: pointer; }
 .task-list-container .task.focus .right .far { display: block; }
 
 .task-list-container .task.focus .right .fas { display: none; }
+
+@media screen and (max-width: 500px) {
+  .task-list { width: 95%; }
+
+  .task-list .container { padding-right: 0; }
+
+  .task-list-container .task { padding: 0.8rem 0.5rem; }
+
+  .task-list-container .task .left .edit-task { padding-left: 3px; }
+
+  .fa-sync-alt { padding-right: 10px; }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+  }
+}
