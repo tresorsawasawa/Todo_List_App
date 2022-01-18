@@ -57,6 +57,11 @@ i { cursor: pointer; }
   justify-content: space-between;
 }
 
+.checkbox {
+  width: 15px;
+  height: 15px;
+}
+
 .task-list-container {
   width: 100%;
 }
@@ -164,9 +169,4 @@ i { cursor: pointer; }
   .task-list-container .task .left .edit-task { padding-left: 3px; }
 
   .fa-sync-alt { padding-right: 10px; }
-
-  .checkbox {
-    width: 20px;
-    height: 20px;
-  }
 }
