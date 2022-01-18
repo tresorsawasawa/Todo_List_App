@@ -18,7 +18,7 @@
 To get a local copy up and running follow  s these simple example steps.
 
 1. Clone the Repo or Download the Zip file or ``` https://github.com/tresorsawasawa/Todo_List_App.git ```.
-2. ``` cd /Todo_List ```
+2. ``` cd /Todo_List_App ```
 3. Open it with the live server by using this command: ``` npm run build ``` or ``` npm start ```
 
 ## Test
@@ -42,7 +42,7 @@ And For tracking linter errors in JavaScript files run:
 ``` npx eslint . ```
 ## Live Demo
 
-See the [Live](https://tresorsawasawa.github.io/Todo_List_App/dist)
+See the [Live](https://tresorsawasawa.github.io/Todo_List_App/)
 
 ## Authors
 
