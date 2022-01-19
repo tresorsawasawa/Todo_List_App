@@ -5,9 +5,7 @@ import { dragDrop } from './modules/dragAndDrop.js';
 
 export const taskList = document.querySelector('.task-list-container');
 
-function getInputValue(task) {
-  return task.description;
-}
+const getInputValue = (task) => task.description;
 
 getTask().forEach((task) => {
   taskList.innerHTML += `<li class="container task flex-center" draggable="true">
