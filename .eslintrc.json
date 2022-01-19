@@ -13,8 +13,8 @@
   "rules": {
     "no-shadow": "off",
     "no-param-reassign": "off",
-    "eol-last": "off",
     "import/no-unresolved": "off",
+    "eol-last": "off",
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
     }]
