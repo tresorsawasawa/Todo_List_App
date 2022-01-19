@@ -1,6 +1,3 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable import/prefer-default-export */
 import './style.css';
 import { getTask } from './modules/data.js';
 import { deleteTask, deleteOne, updateTask } from './modules/controllTools.js';
@@ -57,7 +54,7 @@ window.addEventListener('load', () => {
 });
 
 reload.addEventListener('click', () => {
-  location.reload();
+  window.location.reload();
 });
 
 task.forEach((item) => {

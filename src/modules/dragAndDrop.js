@@ -1,11 +1,6 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-use-before-define */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable import/no-cycle */
-
-import { task, taskList } from '../index.js';
-
 export const dragDrop = () => {
+  const taskList = document.querySelector('.task-list-container');
+  const task = document.querySelectorAll('.task');
   task.forEach((item) => {
     item.addEventListener('dragstart', () => {
       item.classList.add('dragging');
