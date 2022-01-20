@@ -1,6 +1,3 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable import/prefer-default-export */
 import './style.css';
 import { getTask } from './modules/data.js';
 import { deleteTask, deleteOne, updateTask } from './modules/controllTools.js';
@@ -8,9 +5,7 @@ import { dragDrop } from './modules/dragAndDrop.js';
 
 export const taskList = document.querySelector('.task-list-container');
 
-function getInputValue(task) {
-  return task.description;
-}
+const getInputValue = (task) => task.description;
 
 getTask().forEach((task) => {
   taskList.innerHTML += `<li class="container task flex-center" draggable="true">
@@ -57,7 +52,7 @@ window.addEventListener('load', () => {
 });
 
 reload.addEventListener('click', () => {
-  location.reload();
+  window.location.reload();
 });
 
 task.forEach((item) => {

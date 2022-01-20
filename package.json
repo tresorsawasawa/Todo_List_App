@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/tresorsawasawa/Todo_List_App/settings/pages#:~:text=https%3A//tresorsawasawa.github.io/Todo_List_App/",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
