@@ -1,5 +1,3 @@
-/* eslint-disable import/no-cycle */
-
 import { checkbox, editTask } from '../index.js';
 import { getTask } from './data.js';
 
