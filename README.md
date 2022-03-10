@@ -50,7 +50,7 @@ See the [Live](https://tresorsawasawa.github.io/Todo_List_App/)
 
 - GitHub: [@tresorsawasawa](https://github.com/tresorsawasawa)
 - Twitter: [@tresorsawasawa](https://twitter.com/TresorSawasawa)
-- LinkedIn: [Trésor Sawasawa](https://www.linkedin.com/in/tr%C3%A9sor-sawasawa-43745320b/)
+- LinkedIn: [Trésor Sawasawa](https://www.linkedin.com/in/tresor-sawasawa/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
