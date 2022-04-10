@@ -1,10 +1,18 @@
 {
   "name": "todo_list_app",
+  "jest": {
+    "verbose": true,
+    "resetMocks": false,
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ],
+    "testEnvironment": "jsdom"
+  },
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "deploy": "gh-pages -d dist",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
@@ -23,7 +31,9 @@
   "homepage": "https://github.com/tresorsawasawa/Todo_List_App/settings/pages#:~:text=https%3A//tresorsawasawa.github.io/Todo_List_App/",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "@testing-library/jest-dom": "^5.16.1",
     "babel-eslint": "^10.1.0",
+    "cli": "^1.0.1",
     "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -31,6 +41,7 @@
     "hint": "^6.1.9",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
     "style-loader": "^3.3.1",
     "stylelint": "^14.2.0",
     "stylelint-config-standard": "^24.0.0",
@@ -41,6 +52,10 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "jest-environment-jsdom": "^27.4.6",
+    "jest-localstorage-mock": "^2.4.18",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0"
   }
 }
