@@ -28,7 +28,7 @@ getTask().forEach((task) => {
 
 export const task = document.querySelectorAll('.task');
 export const editTask = document.querySelectorAll('.edit-task');
-const editForm = document.querySelectorAll('.edit-form');
+export const editForm = document.querySelectorAll('.edit-form');
 const reload = document.querySelector('.reload');
 export const checkbox = document.querySelectorAll('.checkbox');
 
