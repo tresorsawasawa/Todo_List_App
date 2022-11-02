@@ -26,16 +26,17 @@ To get a local copy up and running follow  s these simple example steps.
   - Etc.
 
 ### Setup
+
 1. Clone the Repo or Download the Zip file or 
 ```
 git clone https://github.com/tresorsawasawa/Todo_List_App.git
-```.
+```
 2. Acces the cloned directory
 ```
 cd Todo_List_App
 ```
 
-### Setup
+### Install
 
 1. To install all the project's dependencies
 ```
