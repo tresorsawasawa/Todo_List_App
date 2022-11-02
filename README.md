@@ -15,9 +15,11 @@
 
 ## Get Started
 
-To get a local copy up and running follow  s these simple example steps.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+
+Before startinga all the processes make sure to have the followinng tools:
   - Node.js
   - Git
   - web browser (e.g. Google Chrome)
@@ -27,7 +29,7 @@ To get a local copy up and running follow  s these simple example steps.
 
 ### Setup
 
-1. Clone the Repo or Download the Zip file or 
+1.  Download the Zip file or Clone the Repo with:
 ```
 git clone https://github.com/tresorsawasawa/Todo_List_App.git
 ```
