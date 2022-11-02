@@ -17,9 +17,39 @@
 
 To get a local copy up and running follow  s these simple example steps.
 
-1. Clone the Repo or Download the Zip file or ``` https://github.com/tresorsawasawa/Todo_List_App.git ```.
-2. ``` cd /Todo_List_App ```
-3. Open it with the live server by using this command: ``` npm run build ``` or ``` npm start ```
+### Prerequisites
+  - Node.js
+  - Git
+  - web browser (e.g. Google Chrome)
+  - text editor (e.g. VSCode)
+  - CLI/terminal
+  - Etc.
+
+### Setup
+1. Clone the Repo or Download the Zip file or 
+```
+git clone https://github.com/tresorsawasawa/Todo_List_App.git
+```.
+2. Acces the cloned directory
+```
+cd Todo_List_App
+```
+
+### Setup
+
+1. To install all the project's dependencies
+```
+npm install
+```
+2. Create the optimized production:
+```
+npm run build
+``` 
+3. Run the app locally
+```
+npm start
+```
+Then the App will open at http://localhost:8080/ in your browser
 
 ## Test
 
