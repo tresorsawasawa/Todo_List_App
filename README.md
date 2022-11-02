@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Before startinga all the processes make sure to have the followinng tools:
+Before starting all the processes make sure to have the followinng tools:
   - Node.js
   - Git
   - web browser (e.g. Google Chrome)
